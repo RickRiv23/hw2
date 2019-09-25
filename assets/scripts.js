@@ -29,6 +29,26 @@ function toggleMenu(menu){
     }
 }
 
+function add2Cart(quantity){
+    let stockNumber = $(stock).val();
+    if ( (stockNumber > 0) && (quantity <= stockNumber) && (quantity > 0)) {
+        // add to cart
+        stockNumber -= quantity;
+        if(stockNumber == 0)
+            setOutOfStock();
+        else
+            updateStatus(false);
+    }
+    else if( (stockNumber <= 0) ){
+        setOutOfStock();
+        updateStatus(true);
+    }
+    else {
+        // nothing
+        return;
+    }
+}
+
 function updateStatus(message){
     if (message) {
         $(status).slideDown();
@@ -50,10 +70,13 @@ function setOutOfStock(){
     $(stock).val("0");
     $(add2CartBtn).hide();
     $(outOfStockBtn).show();
+    $("#user-quantity").prop("disabled", true);
     updateStatus(true);
 };
 
 function resetPage(){
+    $("#user-quantity").val("");
+    $("#user-quantity").prop("disabled", false);
     $(stock).val("5");
     $(add2CartBtn).show();
     $(outOfStockBtn).hide();
@@ -75,7 +98,8 @@ $(cartIcon).on('click', function(){
 
 $(add2CartBtn).on('click', function() {
    if ( $(stock).val() != "0" ) {
-       updateStatus(false);
+       var quantity = $("#user-quantity").val() ? $("#user-quantity").val() : 0;
+       add2Cart(quantity);
    }
 });
 
