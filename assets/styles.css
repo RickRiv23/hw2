@@ -1,0 +1,234 @@
+body{
+    background-color: black;
+    width: 100vw;
+    height: 100vw;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    color: white;
+    margin: 0px auto;
+    text-align: center;
+}
+ul, a{
+    text-decoration: none;
+    list-style: none;
+}
+nav{
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    height: 80%;
+    width: 200px;
+    z-index: 200;
+}
+li>p{
+    font-size: 20px;
+}
+
+.screen{
+    position: relative;
+    margin: 10px auto;
+    width: 550px;
+    height: 1134px;
+    background: rgb(255,255,255);
+    background: linear-gradient(30deg, rgba(255,255,255,1) 0%, rgba(255,220,204,1) 40%);
+}
+
+.navBar{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+}
+.storeTitle{
+    margin: 0px auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+/* Product styling */
+.productPage{
+    width: 100%;
+    height: 100%;
+}
+.product-wrapper{
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    top: 15%;
+    position: relative;
+}
+.img-wrapper{
+    width: 300px;
+    margin: 0px auto;
+}
+.product-title{
+    text-align: center;
+    font-size: 30px;
+}
+.description-wrapper{
+    margin: 50px auto;
+    width: 95%;
+    background-color: rgba(255,255,255, 0.3);
+    padding: 10px 20px;
+}
+.description-title{
+    font-size: 24px;
+}
+.description{
+    font-size: 18px;
+    text-indent: 50px;
+    text-align: left;
+}
+
+
+/* Styling for cart */
+.cart{
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    height: 80%;
+    width: 50%;
+}
+.cart-title{
+    text-align: center;
+    font-size: 30px;
+}
+.cartIcon{
+    cursor: pointer;
+    margin: 20px;
+    text-align: right;
+    height: 50px;
+    width: 50px;
+    fill: #d3531a;
+}
+
+
+/* Button Styling */
+.button-wrapper{
+    width: fit-content;
+    margin: 0px auto;
+}
+.button{
+    cursor: pointer;
+    width: 150px;
+    margin: 0px auto;
+    padding: 10px;
+    border: 3px solid #d3531a;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: white;
+    color: #d3531a;
+    transition: ease-in-out 0.3s;
+}
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button:hover span {
+    padding-right: 25px;
+}
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.button:active{
+    transform: translateY(5px);
+}
+
+
+
+
+
+
+/* Nav Icon styling */
+#navIcon{
+    width: 40px;
+    height: 25px;
+    position: relative;
+    margin: 30px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#navIcon span{
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#navIcon span:nth-child(1) {
+  top: 0px;
+}
+
+#navIcon span:nth-child(2),#navIcon span:nth-child(3) {
+  top: 13px;
+}
+
+#navIcon span:nth-child(4) {
+  top: 26px;
+}
+
+#navIcon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#navIcon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#navIcon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#navIcon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}

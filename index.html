@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="assets/styles.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    </head>
+    <body>
+        <h1>Product Page Mobile Mock-Up</h1>
+        <div class="screen">
+            <section class="navBar">
+                <div id="navIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h3 class="storeTitle">Store</h3>
+                <div>
+                    <svg class="cartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                    <span class="cartCounter"></span>
+                </div>
+                <span id="status-message" style="display: none;"></span>
+            </section>
+            <nav class="js-menu">
+                <ul>
+                    <li><p>Home</p></li>
+                    <li><p>Shop</p></li>
+                    <li><p>Contact</p></li>
+                </ul>
+            </nav>
+            <section class="productPage">
+                <div class="product-wrapper">
+                    <figure class="img-wrapper">
+                        <img width="100%" src="https://cdn.shopify.com/s/files/1/1999/5329/products/aj1sbb.png?v=1535714093"/>
+                    </figure>
+                    <figcaption>
+                        <h3 class="product-title"> Air Jordan 1 'Shattered Backboard'</h3>
+                    </figcaption>
+                    <div>
+                        <p id="adc" class="button"><span>Add to Cart</span></p>
+                        <p id="oos" class="button--disabled" style="display: none;">Out of Stock</p>
+                    </div>
+                    <input id ="stock" type="number" name="stock" value="5" hidden/>
+                    <div class="description-wrapper">
+                        <h3 class="description-title">Description</h3>
+                        <p class="description">
+                            Kindling the energy hidden in matter hundreds of thousands Drake Equation Euclid descended from astronomers extraordinary claims require extraordinary evidence.
+                            Great turbulent clouds stirred by starlight dream of the mind's eye encyclopaedia galactica the ash of stellar alchemy venture.
+                            A still more glorious dawn awaits with pretty stories for which there's little good evidence brain is the seed of intelligence dream of the mind's eye great turbulent clouds courage of our questions and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="cart">
+                <h3 class="cart-title">Cart</h3>
+            </section>
+        </div>
+        <div class="button-wrapper">
+            <button id="reset">Reset</button>
+            <button id="setOOS">Out of Stock</button>
+            <!--<button></button>-->
+        </div>
+    
+    
+        <script src="assets/scripts.js"></script>
+    
+    </body>
+</html>
+
