@@ -17,9 +17,9 @@ nav{
     display: none;
     background-color: white;
     position: absolute;
-    top: 90px;
+    top: 100px;
     left: 0px;
-    height: 80%;
+    height: 920px;
     width: 200px;
     z-index: 200;
 }
@@ -31,7 +31,7 @@ li>p{
     position: relative;
     margin: 10px auto;
     width: 550px;
-    height: 1134px;
+    height: 1020px;
     background: rgb(255,255,255);
     background: linear-gradient(30deg, rgba(255,255,255,1) 0%, rgba(255,220,204,1) 40%);
 }
@@ -49,6 +49,21 @@ li>p{
     margin: 0px auto;
     text-align: center;
     font-size: 50px;
+}
+
+#status-message{
+    color: white;
+    position: absolute;
+    bottom: -30px;
+    width: 530px;
+    text-align: center;
+    padding: 10px;
+}
+.error{
+    background: indianred;
+}
+.success{
+    background-color: forestgreen;
 }
 
 
@@ -75,6 +90,7 @@ li>p{
 .description-wrapper{
     margin: 50px auto;
     width: 95%;
+    height: 300px;
     background-color: rgba(255,255,255, 0.3);
     padding: 10px 20px;
 }
@@ -93,9 +109,9 @@ li>p{
     display: none;
     background-color: white;
     position: absolute;
-    top: 90px;
+    top: 100px;
     right: 0px;
-    height: 80%;
+    height: 920px;
     width: 50%;
 }
 .cart-title{
